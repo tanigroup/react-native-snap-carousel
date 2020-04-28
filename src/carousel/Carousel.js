@@ -1131,7 +1131,7 @@ export default class Carousel extends Component {
     }
 
     snapToNext (animated = true, fireCallback = true) {
-        const itemsLength = this.props.data.length;
+        const itemsLength = this._getCustomDataLength();
 
         let newIndex = this._activeItem + 1;
         if (newIndex > itemsLength - 1) {
